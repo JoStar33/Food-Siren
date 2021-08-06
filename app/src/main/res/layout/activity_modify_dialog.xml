@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="상품명"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/ModifyDialog_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:selectAllOnFocus="true"
+            android:layout_marginRight="40dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="등록일"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/ModifyDialog_regDate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:selectAllOnFocus="true" />
+
+        <ImageButton
+            android:id="@+id/ModifyDialog_btn_for_reg_cal_dialog"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@id/ModifyDialog_regDate"
+            android:layout_toRightOf="@id/ModifyDialog_regDate"
+            android:onClick="OnClickHandlerRegCalBtn"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="유통기한"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/ModifyDialog_expDate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:selectAllOnFocus="true" />
+
+        <ImageButton
+            android:id="@+id/ModifyDialog_btn_for_exp_cal_dialog"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@id/ModifyDialog_expDate"
+            android:layout_toRightOf="@id/ModifyDialog_expDate"
+            android:onClick="OnClickHandlerExpCalBtn"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cal" />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/ModifyDialog_sp_for_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/ModifyDialog_btn_for_modify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="수정"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+</LinearLayout>
+

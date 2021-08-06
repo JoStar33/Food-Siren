@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E633B5E5"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+    <ImageButton
+        android:id="@+id/widget_imageButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="3dp"
+        android:padding="5dp"
+        android:background="#E6FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_foodsiren_blue" />
+
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/widget_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:padding="5dp"
+        android:background="#E6FFFFFF" />
+
+</LinearLayout>

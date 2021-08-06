@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="FoodSiren.Activity.EnrollActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_gravity="center"
+        android:background="#33B5E5"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:id="@+id/ManageActivity_tv_for_tb_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="상품등록"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/EnrollActivity_btn_camera"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/camera" />
+
+        <ImageButton
+            android:id="@+id/EnrollActivity_btn_barcode"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="50dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/barcode" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/EnrollActivity_iv_photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/db_test_tv"
+            android:layout_width="250dp"
+            android:layout_height="100dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/EnrollActivity_et_bar_code"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/abcd"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="바코드 번호"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/EnrollActivity_et_food_name"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/abcd"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="제품명"
+            android:singleLine="true" />
+
+        <Spinner
+            android:id="@+id/EnrollActivity_category_spinner_enroll"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:spinnerMode="dropdown" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/EnrollActivity_et_reg_date"
+                android:layout_width="210dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/abcd"
+                android:gravity="center"
+                android:hint="구매일자 ex)20201101"
+                android:inputType="number"
+                android:maxLines="1" />
+
+            <ImageButton
+                android:id="@+id/EnrollActivity_reg_cal_btn"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="OnClickHandlerRegCalBtn"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/cal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/EnrollActivity_et_exp_date"
+                android:layout_width="210dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/abcd"
+                android:gravity="center"
+                android:hint="유통기한 ex)20201108"
+                android:inputType="number"
+                android:maxLines="1" />
+
+            <ImageButton
+
+                android:id="@+id/EnrollActivity_exp_cal_btn"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/EnrollActivity_et_exp_date"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@id/EnrollActivity_et_exp_date"
+                android:onClick="OnClickHandlerExpCalBtn"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/cal" />
+
+        </LinearLayout>
+        <!--        minus 버튼과 add(plus) 버튼 위치 바꾸었음.-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/EnrollActivity_btn_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="-"
+                app:backgroundTint="#33B5E5" />
+
+            <TextView
+                android:id="@+id/EnrollActivity_tv_count"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/EnrollActivity_btn_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="+"
+                app:backgroundTint="#33B5E5" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/EnrollActivity_btn_save"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="저장"
+            app:backgroundTint="#33B5E5" />
+
+    </LinearLayout>
+
+</LinearLayout>
